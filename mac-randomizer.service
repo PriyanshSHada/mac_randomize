@@ -1,0 +1,11 @@
+[Unit]
+Description=MAC Address Randomizer
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/mac-randomizer -i eth0
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
